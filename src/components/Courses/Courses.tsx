@@ -50,7 +50,7 @@ export function Courses() {
         Nuestros cursos
       </h2>
       <div className="w-full grid grid-cols-1 sm:grid-cols-3 overflow-hidden py-8">
-        {courses.map(({ title, description, image }, i) => (
+        {courses.map(({ title, description, image }) => (
           <div
             key={title}
             className="p-5 flex justify-center flex-col relative bg-background overflow-hidden group hover:shadow-xl transition-transform duration-500 ease-in-out hover:scale-105 hover:translate-y-1 hover:z-10 hover:rounded-sm"

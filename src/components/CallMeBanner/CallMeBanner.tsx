@@ -1,10 +1,5 @@
 import { Button } from '../ui/button';
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSeparator,
-  InputOTPSlot,
-} from '../ui/input-otp';
+import { InputOTP, InputOTPGroup, InputOTPSlot } from '../ui/input-otp';
 
 export function CallMeBanner() {
   return (
