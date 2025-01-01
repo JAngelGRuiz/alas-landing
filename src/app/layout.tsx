@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   viewport: {
     width: 'device-width',
     initialScale: 1,
+    userScalable: false,
   },
   description:
     'Alas es una institución con más de 20 años de historia, especializada en ayudar los estudiantes de México a aprobar el exámen de admisión de universidades y esculeas como la UNAM, IPN, UAM, Comipems y Ceneval',
