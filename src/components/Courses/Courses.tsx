@@ -4,6 +4,7 @@ import UNAM_LOGO from '@/assets/unam_logo.png';
 import UAM_LOGO from '@/assets/uam_logo.png';
 import COMI_LOGO from '@/assets/comi.png';
 import CENEVAL_LOGO from '@/assets/ceneval.png';
+import Link from 'next/link';
 
 const courses = [
   {
@@ -51,7 +52,8 @@ export function Courses() {
       </h2>
       <div className="w-full grid grid-cols-1 sm:grid-cols-3 overflow-hidden py-8">
         {courses.map(({ title, description, image }) => (
-          <div
+          <Link
+            href="/curso/info"
             key={title}
             className="p-5 flex justify-center flex-col relative bg-background overflow-hidden group hover:shadow-xl transition-transform duration-500 ease-in-out hover:scale-105 hover:translate-y-1 hover:z-10 hover:rounded-sm"
           >
@@ -66,14 +68,13 @@ export function Courses() {
               />
             )}
             <div className="relative z-10">
-              <a href="#">
-                <h5 className="py-4 text-2xl font-bold tracking-tight">
-                  {title}
-                </h5>
-              </a>
+              <h5 className="py-4 text-2xl font-bold tracking-tight">
+                {title}
+              </h5>
+
               <p className="mb-3 text-base text-foreground">{description}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </article>

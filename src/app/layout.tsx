@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Alas Cursos',
+  title: 'Alas | Cursos de admisión UNAM, IPN y Comipems',
   viewport: {
     width: 'device-width',
     initialScale: 1,

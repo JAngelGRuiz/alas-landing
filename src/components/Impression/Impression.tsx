@@ -1,4 +1,4 @@
-import { Button } from '../ui/button';
+import Link from 'next/link';
 
 const insights = [
   {
@@ -8,13 +8,12 @@ const insights = [
   },
   {
     title: '+ 90%',
-    description:
-      'De trayectoría ayudando a que nuestros alumnos forgen las habilidades necesarias para seguir volando en su vida profesional.',
+    description: 'De nuestros alumnos ingresan a su primera opción.',
   },
   {
     title: '+ 5,000',
     description:
-      'De trayectoría ayudando a que nuestros alumnos forgen las habilidades necesarias para seguir volando en su vida profesional.',
+      'Alumnos que hemos ayudado a que ingresen a su primera opción.',
   },
 ];
 
@@ -30,7 +29,7 @@ const listOfCourses = [
 export function Impression() {
   return (
     <article className="sm:h-dvh w-ful gap-y-10 l flex flex-col">
-      <section className="min-w-full min-h-[100vh] sm:min-h-0 flex flex-col sm:flex-row flex-auto">
+      <section className="min-w-full min-h-[95vh] sm:min-h-0 flex flex-col sm:flex-row flex-auto">
         <div className="flex-1 flex flex-col justify-center h-full gap-y-4">
           <div className="font-extrabold text-4xl md:text-5xl [text-wrap:balance] text-primary-foreground">
             Te prepramos para tu exámen{' '}
@@ -47,9 +46,13 @@ export function Impression() {
             ¡Estudia donde y lo que quieras! <br /> Nosotros te damos alas para
             volar
           </h1>
-          <Button size="lg" className="rounded-full max-w-fit">
+          <Link
+            className="bg-primary rounded-full min-h-12 px-4 py-3 text-base font-semibold w-full sm:max-w-fit flex items-center justify-center gap-x-4"
+            href="https://wa.me/+525516917248?text=Estoy%20interesado%20en%20obtener%20más%20información%20acerca%20de%20los%20cursos%20de%20ingreso."
+            target="_blank"
+          >
             Agenda un clase
-          </Button>
+          </Link>
         </div>
         <div className="flex-1 flex flex-col justify-end h-full">
           <svg

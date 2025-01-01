@@ -12,8 +12,7 @@ export function Header() {
       </nav>
       <a
         className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-primary text-foreground gap-2 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-        href="https://wa.me/+525516917248?text=Estoy%20interesado%20en%20obtener%20más%20información%20acerca%20de%20los%20cursos%20de%20ingreso.
-"
+        href="tel:+525538897507"
         target="_blank"
         rel="noopener noreferrer"
       >
