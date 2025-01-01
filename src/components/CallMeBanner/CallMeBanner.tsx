@@ -1,21 +1,9 @@
-'use client';
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Phone, Users } from 'lucide-react';
 
-interface FormData {
-  phone: string;
-}
-
 export function CallMeBanner() {
-  const onSubmit = async () => {
-    // Here you would typically send the data to your API
-    console.log('Submit');
-    // setIsSubmitted(true);
-  };
-
   return (
     <section className="relative overflow-hidden">
       {/* Background with gradient */}
@@ -58,7 +46,7 @@ export function CallMeBanner() {
             {/* Social proof */}
             <div className="mt-8 flex items-center gap-x-4">
               <div className="flex -space-x-2">
-                {[...Array(4)].map((_, i) => (
+                {[...Array(3)].map((_, i) => (
                   <div
                     key={i}
                     className="inline-block h-8 w-8 rounded-full border-2 border-white bg-gradient-to-r from-orange-200 to-yellow-200"
@@ -82,7 +70,7 @@ export function CallMeBanner() {
                 <p>Te llamaremos pronto para resolver todas tus dudas.</p>
               </div>
             ) : ( */}
-            <form onSubmit={onSubmit} className="space-y-6">
+            <form className="space-y-6">
               <div>
                 <label
                   htmlFor="phone"
