@@ -5,7 +5,7 @@ import { CheckCircle, Phone, Users } from 'lucide-react';
 
 export function CallMeBanner() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="my-16 relative overflow-hidden">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 opacity-90" />
 

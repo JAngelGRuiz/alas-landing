@@ -30,11 +30,11 @@ export function Impression() {
   return (
     <article className="sm:h-dvh w-ful gap-y-10 l flex flex-col">
       <section className="min-w-full min-h-[95vh] sm:min-h-0 flex flex-col sm:flex-row flex-auto">
-        <div className="flex-1 flex flex-col justify-center h-full gap-y-4">
+        <div className="flex-1 flex flex-col justify-center items-center sm:items-start h-full gap-y-9 sm:gap-y-4 text-center sm:text-left">
           <div className="font-extrabold text-4xl md:text-5xl [text-wrap:balance] text-primary-foreground">
-            Te prepramos para tu exámen{' '}
+            Te prepramos para tu exámen
             <span className="text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.5xl)*theme(lineHeight.tight))] overflow-hidden">
-              <ul className="block animate-text-slide-6 text-left leading-tight [&_li]:block">
+              <ul className="block animate-text-slide-6 text-center sm:text-left leading-tight [&_li]:block">
                 {listOfCourses.map((course) => (
                   <li key={course}>{course}</li>
                 ))}
@@ -47,11 +47,11 @@ export function Impression() {
             volar
           </h1>
           <Link
-            className="bg-primary rounded-full min-h-12 px-4 py-3 text-base font-semibold w-full sm:max-w-fit flex items-center justify-center gap-x-4"
-            href="https://wa.me/+525516917248?text=Estoy%20interesado%20en%20obtener%20más%20información%20acerca%20de%20los%20cursos%20de%20ingreso."
+            className="bg-primary rounded-md min-h-14 px-4 py-3 text-base font-semibold max-w-xs flex items-center justify-center gap-x-4"
+            href="https://wa.me/+525538897507?text=Estoy%20interesado%20en%20obtener%20más%20información%20acerca%20de%20los%20cursos%20de%20ingreso."
             target="_blank"
           >
-            Agenda un clase
+            ¡Agenda una clase muestra!
           </Link>
         </div>
         <div className="flex-1 flex flex-col justify-end h-full">
@@ -122,7 +122,7 @@ export function Impression() {
           </svg>
         </div>
       </section>
-      <section className="flex-1 w-full py-10 sm:py-0 bg-accent rounded-3xl min-h-[221px] flex flex-col sm:flex-row items-center justify-center space-y-16 sm:space-y-0">
+      <section className="flex-1 w-full py-10 sm:py-0 bg-accent border border-primary rounded-3xl min-h-[221px] flex flex-col sm:flex-row items-center justify-center space-y-24 sm:space-y-0">
         {insights.map(({ title, description }) => (
           <article key={title} className="flex-1 flex flex-col items-center">
             <h4 className="sm:mb-9 font-bold text-3xl">{title}</h4>

@@ -34,7 +34,7 @@ export function Postick({
   return (
     <div
       className={`
-        relative p-6 rounded-2xl w-auto mx-8 sm:mx-0 md:max-w-[380px] h-[250px]
+        relative p-6 rounded-2xl w-auto mx-8 sm:mx-0 md:max-w-[380px] h-[300px] md:h-[350px]
         transform transition-all duration-300
         hover:-translate-y-1 hover:shadow-xl
         shadow-lg backdrop-blur-sm flex flex-col justify-center

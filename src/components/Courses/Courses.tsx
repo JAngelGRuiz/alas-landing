@@ -8,19 +8,19 @@ import Link from 'next/link';
 
 const courses = [
   {
-    title: 'Curso POLI',
+    title: 'Curso de admisión al IPN',
     description:
       'Un curso especialmente diseñado para que ingreses al politécnico, recientemente actualizado este curso es impartido con mucho cariño y dedicación por politécnicos.',
     image: IPN_LOGO,
   },
   {
-    title: 'Curso UNAM',
+    title: 'Curso de admisión a la UNAM',
     description:
       'Curso de ingreso a la UNAM. ¡No te quedes fuera de la UNAM! Este curso te prepara con todo en todas las áreas que necesitas para asegurar tu lugar en la UNAM. ',
     image: UNAM_LOGO,
   },
   {
-    title: 'Curso COMIPEMS',
+    title: 'Curso para COMIPEMS',
     description:
       'Asegura tu lugar en alguna de tus primeras opciones. Con este curso lograrás ingresar a las escuelas de nivel medio superior de la UNAM y del IPN',
     image: COMI_LOGO,
@@ -32,7 +32,7 @@ const courses = [
     image: CENEVAL_LOGO,
   },
   {
-    title: 'Curso UAM',
+    title: 'Curso de admisión a la UAM',
     description:
       'Ingresa a la UAM preparándote en cada una de sus áreas y además recibe toda la orientación necesaria para superar con éxito este exámen de admisión de está gran universidad. ',
     image: UAM_LOGO,
@@ -46,11 +46,11 @@ const courses = [
 
 export function Courses() {
   return (
-    <article className="w-full p-10">
-      <h2 className="my-12 text-4xl font-semibold text-center">
+    <article className="w-full p-x-4 sm:p-x-10">
+      <h2 className="my-16 text-4xl sm:text-5xl font-medium text-center">
         Nuestros cursos
       </h2>
-      <div className="w-full grid grid-cols-1 sm:grid-cols-3 overflow-hidden py-8">
+      <div className="w-full grid grid-cols-1 space-y-9 sm:grid-cols-3 overflow-hidden py-8">
         {courses.map(({ title, description, image }) => (
           <Link
             href="/curso/info"
