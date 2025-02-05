@@ -209,6 +209,10 @@ export default {
           '0%, 100%': { transform: 'translate(0, 0) rotateZ(0)' },
           '50%': { transform: 'translate(-10px, 0) rotateZ(-45deg)' },
         },
+        scroll: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         handBounce: 'handBounce 3.5s infinite ease-in-out',
@@ -228,6 +232,7 @@ export default {
           'text-slide-7 17.5s cubic-bezier(0.83, 0, 0.17, 1) infinite',
         'text-slide-8':
           'text-slide-8 20s cubic-bezier(0.83, 0, 0.17, 1) infinite',
+        scroll: 'scroll 60s linear 0s infinite',
       },
     },
   },

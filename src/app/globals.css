@@ -82,3 +82,21 @@ body {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
+
+/* Webkit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust width */
+  height: 10px; /* For horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Optional: Makes track invisible */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffb200;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box; /* Makes the thumb look rounded */
+}
