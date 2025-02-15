@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { LinkedinIcon } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
@@ -22,24 +22,56 @@ export function ReviewCard({
   carroussel,
 }: ReviewCardProps) {
   const cardComponent = (
-    <Card className="w-full">
-      <CardHeader className="flex flex-row items-center gap-4 space-y-0">
+    <Card className="w-full backdrop-filter bg-white/25 backdrop-blur-3xl border border-white-100/20">
+      <div className="flex w-28 p-4">
+        <Star
+          fill="white"
+          className="ml-auto h-3.5 w-3.5 border-white opacity-95"
+          color="white"
+        />
+        <Star
+          fill="white"
+          className="ml-auto h-3.5 w-3.5 border-white opacity-95"
+          color="white"
+        />
+        <Star
+          fill="white"
+          className="ml-auto h-3.5 w-3.5 border-white opacity-95"
+          color="white"
+        />
+        <Star
+          fill="white"
+          className="ml-auto h-3.5 w-3.5 border-white opacity-95"
+          color="white"
+        />
+        <Star
+          fill="white"
+          className="ml-auto h-3.5 w-3.5 border-white opacity-95"
+          color="white"
+        />
+      </div>
+      <CardHeader className="flex flex-row items-center gap-4 space-y-0 mt-0 pt-0">
         <div className="h-12 w-12 rounded-full overflow-hidden relative">
           <Image
             src={author.image || '/placeholder.svg'}
             alt={author.name}
             fill
-            className="object-cover"
+            className="object-cover rounded-full"
           />
         </div>
         <div className="flex flex-col">
-          <p className="text-sm font-semibold">{author.name}</p>
-          <p className="text-sm text-muted-foreground">{author.title}</p>
+          <p className="text-white/90 tracking-widest text-sm font-semibold">
+            {author.name}
+          </p>
+          <p className="text-white/90 tracking-widest text-sm">
+            {author.title}
+          </p>
         </div>
-        <LinkedinIcon className="ml-auto h-5 w-5 text-[#0A66C2]" />
       </CardHeader>
       <CardContent>
-        <p className="text-sm leading-relaxed">{content}</p>
+        <p className="text-white/70 text-sm leading-relaxed">
+          &quot;{content}&quot;
+        </p>
       </CardContent>
     </Card>
   );

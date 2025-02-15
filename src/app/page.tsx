@@ -10,13 +10,11 @@ export default function Home() {
     <div className="font-[family-name:var(--font-geist-sans)]">
       <main className="w-full">
         <Header />
-        <div className="py-6 px-3 sm:px-10 rounded-bl-[60px] rounded-br-[60px]">
-          <Impression />
-        </div>
+        <Impression />
         <Courses />
-        <CallMeBanner />
         <PostickWall />
         <ReviewsDashboard />
+        <CallMeBanner />
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <h3>Im footer</h3>

@@ -2,11 +2,14 @@
 import { useCallback, useEffect, useState } from 'react';
 
 export function useIsMobile(mobileScreenSize = 768) {
-  if (typeof window.matchMedia !== 'function') {
+  const isClientComponent = typeof window !== 'undefined';
+  if (isClientComponent && typeof window.matchMedia !== 'function') {
     throw Error('matchMedia not supported by browser!');
   }
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia(`(max-width: ${mobileScreenSize}px)`).matches
+    isClientComponent
+      ? window.matchMedia(`(max-width: ${mobileScreenSize}px)`).matches
+      : null
   );
 
   const checkIsMobile = useCallback((event: MediaQueryListEvent) => {
@@ -14,24 +17,26 @@ export function useIsMobile(mobileScreenSize = 768) {
   }, []);
 
   useEffect(() => {
-    const mediaListener = window.matchMedia(
-      `(max-width: ${mobileScreenSize}px)`
-    );
-    // try catch used to fallback for browser compatibility
-    try {
-      mediaListener.addEventListener('change', checkIsMobile);
-    } catch {
-      mediaListener.addListener(checkIsMobile);
-    }
-
-    return () => {
+    if (isClientComponent) {
+      const mediaListener = window.matchMedia(
+        `(max-width: ${mobileScreenSize}px)`
+      );
+      // try catch used to fallback for browser compatibility
       try {
-        mediaListener.removeEventListener('change', checkIsMobile);
+        mediaListener.addEventListener('change', checkIsMobile);
       } catch {
-        mediaListener.removeListener(checkIsMobile);
+        mediaListener.addListener(checkIsMobile);
       }
-    };
-  }, [mobileScreenSize, checkIsMobile]);
+
+      return () => {
+        try {
+          mediaListener.removeEventListener('change', checkIsMobile);
+        } catch {
+          mediaListener.removeListener(checkIsMobile);
+        }
+      };
+    }
+  }, [mobileScreenSize, checkIsMobile, isClientComponent]);
 
   return isMobile;
 }

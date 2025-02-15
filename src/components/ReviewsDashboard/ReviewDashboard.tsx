@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { ReviewCard } from '@/components/ReviewsCard/ReviewCard';
 import { useIsMobile } from '@/hooks/useMobile';
 import { AnimatePresence } from 'framer-motion';
+import { Title } from '../Title/Title';
 
 const REVIEWS = [
   {
@@ -149,14 +150,14 @@ export function ReviewsDashboard() {
   }, []);
 
   return (
-    <section className="w-full overflow-hidden bg-slate-50 py-12 h-[600px]">
-      <h2 className="text-center text-3xl font-bold tracking-tight mb-12">
+    <section className="w-full mt-28 pt-36 pb-36 flex flex-col gap-y-24 overflow-hidden bg-secondary">
+      <Title className="text-white">
         Mira lo que nuestros estudiantes piensan
-      </h2>
+      </Title>
 
       {isMobile ? (
         <div
-          className="relative w-full"
+          className="relative w-full min-h-[250px]"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >

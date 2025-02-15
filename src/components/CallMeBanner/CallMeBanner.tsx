@@ -7,7 +7,7 @@ export function CallMeBanner() {
   return (
     <section className="my-16 relative overflow-hidden">
       {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 opacity-90" />
+      <div className="absolute inset-0 bg-accent opacity-90" />
 
       {/* Glass effect overlay */}
       <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
