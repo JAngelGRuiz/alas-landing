@@ -1,10 +1,27 @@
+'use client';
 import { Menu, Phone } from 'lucide-react';
-import Link from 'next/link';
 import { Button } from '../ui/button';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export function Header() {
+  const [hasShadow, setHasShadow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasShadow(window.scrollY > 80);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="px-4 w-full flex justify-between items-center sticky top-0 left-0 py-4 z-20 shadow-md">
+    <header
+      className={`p-4 w-full flex justify-between items-center fixed top-0 left-0 z-50 h-[--sidebar-height] bg-background transition-all duration-200  ${
+        hasShadow && 'shadow-md'
+      }`}
+    >
       <h1>Alas Logo</h1>
       <nav className="hidden sm:flex gap-x-16">
         <Link href="/">Cursos</Link>

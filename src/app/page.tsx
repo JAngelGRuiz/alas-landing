@@ -9,12 +9,12 @@ import { ReviewsDashboard } from '@/components/ReviewsDashboard/ReviewDashboard'
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
-      <main className="w-full">
-        <Header />
+      <Header />
+      <main className="w-full pt-[--sidebar-height]">
         <Impression />
         <Courses />
-        <PostickWall />
         <ReviewsDashboard />
+        <PostickWall />
         <CallMeBanner />
       </main>
       <Footer />
