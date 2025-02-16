@@ -4,8 +4,8 @@ import { Title } from '../Title/Title';
 
 export function PostickWall() {
   return (
-    <div className="pt-16 px-2 w-full flex flex-col gap-y-16 space-y-16 items-center">
-      <Title>No somos tradicionales</Title>
+    <div className="pt-36 px-2 w-full flex flex-col gap-y-16 space-y-16 items-center">
+      <Title>¿Por qué rifamos?</Title>
       <div className="space-y-10 sm:space-y-0 w-full flex flex-col sm:flex-row place-items-center sm:gap-x-12 sm:justify-center">
         <div className="transform -rotate-3 sm:-rotate-6">
           <Postick

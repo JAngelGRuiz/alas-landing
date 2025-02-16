@@ -49,9 +49,11 @@ const courses = [
   },
 ];
 
+//
+
 export function CoursesGrid() {
   return (
-    <div className="w-full grid grid-cols-1 gap-x-8 space-y-9 sm:grid-cols-3 overflow-hidden py-8 items-end">
+    <div className="w-full grid grid-cols-1 gap-x-8 space-y-9 md:grid-cols-3 overflow-hidden py-8 items-end">
       {courses.map(({ title, description, image }) => (
         <motion.div
           key={title}
@@ -61,7 +63,7 @@ export function CoursesGrid() {
           transition={{ duration: 0.2 }}
           className="group"
         >
-          <Card className="relative h-full overflow-hidden border-0 bg-gradient-to-b from-card/50 to-card p-1">
+          <Card className="relative h-full overflow-hidden border-0 bg-gradient-to-b from-card/50 to-card p-1 rounded-3xl shadow-md">
             <div className="relative h-full rounded-lg bg-card p-5">
               {/* {isPopular && ( 
                 <Badge
@@ -114,17 +116,16 @@ export function CoursesGrid() {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-2 sm:flex-row">
+                <div className="flex flex-col gap-2 lg:flex-row">
                   <Button
                     asChild
                     className="group relative bg-gradient-to-r from-primary to-[var(rgba(255,182,0,0.2))] transition-all hover:from-primary"
                   >
-                    <Link href="/register" className="relative">
+                    <Link
+                      href="/register"
+                      className="relative group-hover:bg-accent"
+                    >
                       <span className="relative z-10">Registrarse ahora</span>
-                      <motion.span
-                        className="absolute inset-0 -z-10 rounded-md bg-gradient-to-r from-blue-600/50 to-violet-600/50 opacity-0 blur-xl transition-opacity"
-                        whileHover={{ opacity: 1 }}
-                      />
                     </Link>
                   </Button>
                   <Button

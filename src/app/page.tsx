@@ -1,5 +1,6 @@
 import { CallMeBanner } from '@/components/CallMeBanner/CallMeBanner';
 import { Courses } from '@/components/Courses/Courses';
+import { Footer } from '@/components/Footer/Footer';
 import { Header } from '@/components/Header/Headert';
 import { Impression } from '@/components/Impression/Impression';
 import { PostickWall } from '@/components/PosticksWall/PosticksWall';
@@ -16,9 +17,7 @@ export default function Home() {
         <ReviewsDashboard />
         <CallMeBanner />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <h3>Im footer</h3>
-      </footer>
+      <Footer />
     </div>
   );
 }

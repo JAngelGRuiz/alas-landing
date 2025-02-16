@@ -5,9 +5,9 @@ import { CheckCircle, Phone, Users } from 'lucide-react';
 
 export function CallMeBanner() {
   return (
-    <section className="my-16 relative overflow-hidden">
+    <section className="relative overflow-hidden max-w-7xl rounded-3xl mx-auto">
       {/* Background with gradient */}
-      <div className="absolute inset-0 bg-accent opacity-90" />
+      <div className="absolute inset-0 bg-[#0075FF]" />
 
       {/* Glass effect overlay */}
       <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />

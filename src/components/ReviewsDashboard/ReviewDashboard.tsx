@@ -5,6 +5,8 @@ import { useIsMobile } from '@/hooks/useMobile';
 import { AnimatePresence } from 'framer-motion';
 import { Title } from '../Title/Title';
 
+// bg-[url(../assets/ellipse.png)] bg-no-repeat bg-center bg-cover backdrop-brightness-0
+
 const REVIEWS = [
   {
     id: 1,
@@ -150,10 +152,9 @@ export function ReviewsDashboard() {
   }, []);
 
   return (
-    <section className="w-full mt-28 pt-36 pb-36 flex flex-col gap-y-24 overflow-hidden bg-secondary">
-      <Title className="text-white">
-        Mira lo que nuestros estudiantes piensan
-      </Title>
+    <section className="w-full mt-40 pt-28 pb-32 flex flex-col gap-y-24 overflow-hidden bg-[#E2F3F9] rounded-3xl relative">
+      <div className="w-[50%] h-auto rounded-full bg-background absolute bg-center"></div>
+      <Title>Mira lo que nuestros estudiantes piensan</Title>
 
       {isMobile ? (
         <div

@@ -22,35 +22,8 @@ export function ReviewCard({
   carroussel,
 }: ReviewCardProps) {
   const cardComponent = (
-    <Card className="w-full backdrop-filter bg-white/25 backdrop-blur-3xl border border-white-100/20">
-      <div className="flex w-28 p-4">
-        <Star
-          fill="white"
-          className="ml-auto h-3.5 w-3.5 border-white opacity-95"
-          color="white"
-        />
-        <Star
-          fill="white"
-          className="ml-auto h-3.5 w-3.5 border-white opacity-95"
-          color="white"
-        />
-        <Star
-          fill="white"
-          className="ml-auto h-3.5 w-3.5 border-white opacity-95"
-          color="white"
-        />
-        <Star
-          fill="white"
-          className="ml-auto h-3.5 w-3.5 border-white opacity-95"
-          color="white"
-        />
-        <Star
-          fill="white"
-          className="ml-auto h-3.5 w-3.5 border-white opacity-95"
-          color="white"
-        />
-      </div>
-      <CardHeader className="flex flex-row items-center gap-4 space-y-0 mt-0 pt-0">
+    <Card className="w-full bg-white shadow-lg">
+      <CardHeader className="flex flex-row items-center gap-4 space-y-0 mt-0 pt-5">
         <div className="h-12 w-12 rounded-full overflow-hidden relative">
           <Image
             src={author.image || '/placeholder.svg'}
@@ -60,19 +33,20 @@ export function ReviewCard({
           />
         </div>
         <div className="flex flex-col">
-          <p className="text-white/90 tracking-widest text-sm font-semibold">
-            {author.name}
-          </p>
-          <p className="text-white/90 tracking-widest text-sm">
-            {author.title}
-          </p>
+          <p className="tracking-widest text-sm font-semibold">{author.name}</p>
+          <p className="tracking-widest text-sm">{author.title}</p>
         </div>
       </CardHeader>
       <CardContent>
-        <p className="text-white/70 text-sm leading-relaxed">
-          &quot;{content}&quot;
-        </p>
+        <p className="text-sm leading-relaxed">&quot;{content}&quot;</p>
       </CardContent>
+      <div className="flex w-32 p-4">
+        <Star className="ml-auto h-3.5 w-3.5" color="#F3C623" fill="#F3C623" />
+        <Star className="ml-auto h-3.5 w-3.5" color="#F3C623" fill="#F3C623" />
+        <Star className="ml-auto h-3.5 w-3.5" color="#F3C623" fill="#F3C623" />
+        <Star className="ml-auto h-3.5 w-3.5" color="#F3C623" fill="#F3C623" />
+        <Star className="ml-auto h-3.5 w-3.5" color="#F3C623" fill="#F3C623" />
+      </div>
     </Card>
   );
 
