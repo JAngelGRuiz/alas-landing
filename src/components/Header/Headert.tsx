@@ -9,7 +9,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setHasShadow(window.scrollY > 80);
+      setHasShadow(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', handleScroll);

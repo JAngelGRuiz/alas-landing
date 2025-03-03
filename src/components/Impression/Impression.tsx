@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button } from '../ui/button';
 import Rocket from '../../assets/rocket.svg';
 import Image from 'next/image';
+import { SchedulerDrawer } from '../DesignSystem/Drawer';
 
 const insights = [
   {
@@ -31,7 +32,7 @@ const listOfCourses = [
 
 export function Impression() {
   return (
-    <div className="py-6 px-3 sm:px-10 rounded-bl-[60px] rounded-br-[60px] relative">
+    <div className="py-6 px-3 sm:px-10">
       <Image
         src={Rocket}
         width={300}
@@ -41,7 +42,7 @@ export function Impression() {
 
       <article className="w-ful gap-y-10 l flex flex-col h-dvh">
         <section className="min-w-full flex flex-col items-center flex-auto">
-          <div className="flex-1 flex flex-col justify-end items-center h-full gap-y-9 sm:gap-y-4 text-center">
+          <div className="flex-1 flex flex-col justify-end items-center gap-y-9 sm:gap-y-4 text-center">
             <div className="font-extrabold text-4xl md:text-6xl [text-wrap:balance] text-primary-foreground flex flex-col items-center">
               Te prepramos para tu exámen
               <span className="text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))] overflow-hidden">
@@ -59,13 +60,7 @@ export function Impression() {
               ¡Estudia donde y lo que quieras! Nosotros te damos alas para volar
             </h1>
             <div className="flex flex-col sm:flex-row items-center gap-3">
-              <Link
-                className="bg-primary rounded-md min-h-14 px-4 py-3 text-base font-semibold max-w-xs flex items-center justify-center gap-x-4"
-                href="https://wa.me/+525538897507?text=Estoy%20interesado%20en%20obtener%20más%20información%20acerca%20de%20los%20cursos%20de%20ingreso."
-                target="_blank"
-              >
-                ¡Agenda una clase muestra!
-              </Link>
+              <SchedulerDrawer />
               <Link href="/prueba">
                 <Button
                   variant="outline"
