@@ -10,9 +10,7 @@ import {
   DrawerTrigger,
 } from '@/components/ui/drawer';
 import { ButtonSystem } from './Button/button';
-import { Input } from '../ui/input';
-import { Label } from '../ui/label';
-import { handleSubmit } from '@/actions/submitInfo';
+import { ContactForm } from '../ContactForm/ContactForm';
 
 export function SchedulerDrawer() {
   return (
@@ -31,17 +29,7 @@ export function SchedulerDrawer() {
               ayudarte con tus dudas, ¡Sin compromiso alguno!
             </DrawerDescription>
           </DrawerHeader>
-          <form className={'grid items-start gap-4'} action={handleSubmit}>
-            <div className="grid gap-2">
-              <Label htmlFor="name">Nombre del estudiante</Label>
-              <Input id="name" name="name" required />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="phone">Número de contacto</Label>
-              <Input id="phone" type="tel" name="phone" required />
-            </div>
-            <Button type="submit">Quiero información</Button>
-          </form>
+          <ContactForm />
           <DrawerFooter>
             <DrawerClose asChild>
               <Button variant="outline">Cancelar</Button>
