@@ -1,5 +1,6 @@
 import { CallMeBanner } from '@/components/CallMeBanner/CallMeBanner';
 import { Courses } from '@/components/Courses/Courses';
+import FloatingActionButton from '@/components/FloatingAction/FloatingAction';
 import { Footer } from '@/components/Footer/Footer';
 import { Header } from '@/components/Header/Headert';
 import { Impression } from '@/components/Impression/Impression';
@@ -18,6 +19,7 @@ export default function Home() {
         <CallMeBanner />
       </main>
       <Footer />
+      <FloatingActionButton />
     </div>
   );
 }

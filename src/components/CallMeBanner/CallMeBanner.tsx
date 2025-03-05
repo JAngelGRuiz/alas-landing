@@ -1,7 +1,6 @@
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Phone, Users } from 'lucide-react';
+import { CheckCircle, Users } from 'lucide-react';
+import { ContactForm } from '../ContactForm/ContactForm';
 
 export function CallMeBanner() {
   return (
@@ -60,7 +59,7 @@ export function CallMeBanner() {
           </div>
 
           {/* Right column - Form */}
-          <div className="bg-white/10 backdrop-blur rounded-2xl p-8 lg:p-12">
+          <div className="bg-white/20 text-white/90 rounded-2xl p-8 lg:p-12">
             {/* {isSubmitted ? (
               <div className="text-center text-white">
                 <CheckCircle className="mx-auto h-12 w-12 mb-4" />
@@ -70,50 +69,7 @@ export function CallMeBanner() {
                 <p>Te llamaremos pronto para resolver todas tus dudas.</p>
               </div>
             ) : ( */}
-            <form className="space-y-6">
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-white mb-2"
-                >
-                  Ingresa tu número
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <Phone className="h-5 w-5 text-white/60" />
-                  </div>
-                  <Input
-                    // {...register('phone', {
-                    //   required: 'El número es requerido',
-                    //   pattern: {
-                    //     value: /^[0-9]{10}$/,
-                    //     message: 'Ingresa un número válido de 10 dígitos',
-                    //   },
-                    // })}
-                    type="tel"
-                    className="pl-10 bg-white/20 border-white/20 text-white placeholder:text-white/60"
-                    placeholder="Ej: 1234567890"
-                  />
-                </div>
-                {/* {errors.phone && (
-                    <p className="mt-2 text-sm text-white/90">
-                      {errors.phone.message}
-                    </p>
-                  )} */}
-              </div>
-
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full bg-white text-orange-600 hover:bg-white/90"
-              >
-                Contáctenme
-              </Button>
-
-              <p className="text-sm text-white/80 text-center">
-                Te contactaremos en menos de 24 horas
-              </p>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>

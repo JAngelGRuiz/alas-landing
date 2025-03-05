@@ -3,7 +3,7 @@ import { handleSubmit } from '@/actions/submitInfo';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
-import { useActionState, useEffect } from 'react';
+import { FormEvent, startTransition, useActionState, useEffect } from 'react';
 import { toast } from 'sonner';
 
 export function ContactForm() {
@@ -20,8 +20,14 @@ export function ContactForm() {
     }
   }, [isPending, state.wasSuccess]);
 
+  const onSubmit = (e: FormEvent) => {
+    e?.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    startTransition(() => submitRequest(formData));
+  };
+
   return (
-    <form className={'grid items-start gap-4'} action={submitRequest}>
+    <form className={'grid items-start gap-4'} onSubmit={onSubmit}>
       <div className="grid gap-2">
         <Label htmlFor="name">Nombre del estudiante</Label>
         <Input
@@ -42,6 +48,7 @@ export function ContactForm() {
           required
         />
       </div>
+      <p className="text-red-700">{state.error && state.message}</p>
       <Button type="submit" disabled={isPending}>
         Quiero información
       </Button>
