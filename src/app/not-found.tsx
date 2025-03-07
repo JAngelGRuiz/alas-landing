@@ -34,7 +34,7 @@ export default function NotFound() {
               Volver al inicio
             </Link>
             <Link
-              href="/cursos"
+              href="/#courses"
               className="bg-white border-2 border-navy-blue text-navy-blue font-medium px-8 py-3 rounded-full hover:bg-gray-50 transition-colors"
             >
               Ver nuestros cursos

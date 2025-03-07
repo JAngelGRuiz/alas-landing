@@ -69,7 +69,7 @@ export function CallMeBanner() {
                 <p>Te llamaremos pronto para resolver todas tus dudas.</p>
               </div>
             ) : ( */}
-            <ContactForm />
+            <ContactForm autoFocus={false} />
           </div>
         </div>
       </div>

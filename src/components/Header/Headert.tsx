@@ -1,11 +1,22 @@
 'use client';
-import { Menu, Phone } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@/components/ui/drawer';
 
 export function Header() {
   const [hasShadow, setHasShadow] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,23 +34,43 @@ export function Header() {
       }`}
     >
       <h1>Alas Logo</h1>
-      <nav className="hidden sm:flex gap-x-16">
+      <nav className="hidden sm:flex gap-x-16 pr-16">
         <Link href="/">Cursos</Link>
         <Link href="/">Precios</Link>
         <Link href="/">Nosotros</Link>
       </nav>
-      <a
-        className="rounded-full border border-solid border-transparent transition-colors hidden md:flex items-center justify-center bg-primary text-foreground gap-2 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-        href="tel:+525538897507"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Phone />
-        Llamar ahora
-      </a>
-      <Button variant="ghost" className="md:hidden">
-        <Menu />
-      </Button>
+
+      <Drawer direction="top">
+        <DrawerTrigger asChild>
+          <Button
+            variant="ghost"
+            className="md:hidden p-0"
+            onClick={() => setOpenMenu((prev) => !prev)}
+          >
+            <Menu className="!h-6 !w-8" />
+          </Button>
+        </DrawerTrigger>
+        <DrawerContent
+          className="h-full rounded-none"
+          hiddeHandler
+          showCloseButton
+        >
+          <DrawerHeader>
+            <DrawerTitle>Nostros te ayudamos</DrawerTitle>
+            <DrawerDescription>
+              Ingresa tus datos y nos pondremos en contacto a la brevedad para
+              ayudarte con tus dudas, ¡Sin compromiso alguno!
+            </DrawerDescription>
+          </DrawerHeader>
+          <nav>
+            <h1>menu</h1>
+          </nav>
+          <DrawerFooter>
+            <Button>Enviar mensaje</Button>
+            <Button>Enviar mensaje</Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
     </header>
   );
 }

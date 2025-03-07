@@ -6,7 +6,11 @@ import { Label } from '../ui/label';
 import { FormEvent, startTransition, useActionState, useEffect } from 'react';
 import { toast } from 'sonner';
 
-export function ContactForm() {
+interface IContactFrom {
+  autoFocus?: boolean;
+}
+
+export function ContactForm({ autoFocus = true }: IContactFrom) {
   const [state, submitRequest, isPending] = useActionState(handleSubmit, {
     message: null,
     wasSuccess: false,
@@ -35,7 +39,7 @@ export function ContactForm() {
           name="name"
           placeholder="Bruce Wayne"
           required
-          autoFocus
+          autoFocus={autoFocus}
         />
       </div>
       <div className="grid gap-2">

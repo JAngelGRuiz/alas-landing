@@ -40,7 +40,7 @@ export function Impression() {
         className="absolute hidden sm:flex top-24 md:top-8 lg:top-20 -z-10"
       ></Image>
 
-      <article className="w-ful gap-y-10 l flex flex-col h-dvh">
+      <article className="w-ful gap-y-10 l flex flex-col h-vh">
         <section className="min-w-full flex flex-col items-center flex-auto">
           <div className="flex-1 flex flex-col justify-end items-center gap-y-9 sm:gap-y-4 text-center">
             <div className="font-extrabold text-4xl md:text-6xl [text-wrap:balance] text-primary-foreground flex flex-col items-center">
