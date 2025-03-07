@@ -5,7 +5,6 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
   DrawerFooter,
@@ -16,7 +15,6 @@ import {
 
 export function Header() {
   const [hasShadow, setHasShadow] = useState(false);
-  const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,11 +40,7 @@ export function Header() {
 
       <Drawer direction="top">
         <DrawerTrigger asChild>
-          <Button
-            variant="ghost"
-            className="md:hidden p-0"
-            onClick={() => setOpenMenu((prev) => !prev)}
-          >
+          <Button variant="ghost" className="md:hidden p-0">
             <Menu className="!h-6 !w-8" />
           </Button>
         </DrawerTrigger>
